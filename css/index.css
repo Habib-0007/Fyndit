@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	font-family: "Jost", sans-serif;
+}
+
+body {
+	background: hsl(210, 40%, 96.1%);
+}
+
+::selection {
+	background: #000;
+	color: #fff;
+}
+
+main {
+	height: 100svh;
+}
+
+header {
+	padding: 12px 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	background: #fff;
+}
+
+header h1 {
+	font-size: 1.5em;
+	color: #337ab7;
+}
+
+.toggle {
+	background: #337ab7;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 7.5px;
+	padding: 8px 10px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.searchResult {
+	overflow-y: scroll;
+	height: 81%;
+}
+
+.senderText {
+	/* background: #d3d3d3; */
+	background-color: #337ab7;
+	color: #fff;
+	padding: 16px 12px;
+	font-size: 1.2em;
+	width: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.senderText .image {
+	width: 36px;
+	height: 36px;
+	padding: 10px;
+	border-radius: 50%;
+	background: #fff;
+	color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.aiResult {
+	/*background: #008080;*/
+	background-color: #e9ecef;
+	padding: 16px 12px;
+	font-size: 1.2em;
+	width: 100%;
+	color: #000;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.aiResult .image {
+	width: 36px;
+	height: 36px;
+	padding: 10px;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.searchArea {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+	width: 100%;
+	padding: 16px 12px;
+	background: #fff;
+}
+
+.searchArea input {
+	width: 90%;
+	border: 2px solid #000;
+	height: 40px;
+	padding: 5px 8px;
+	font-size: 1.1em;
+	border-radius: 4px;
+}
+
+.searchArea input:hover {
+	border: 2px solid #337ab7;
+}
+
+.searchArea button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #337ab7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.searchArea button i {
+	font-size: 1.3em;
+}
