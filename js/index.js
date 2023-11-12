@@ -13,8 +13,8 @@ searchBtn.addEventListener("click", () => {
 	let aiResult = document.createElement("div");
 	senderText.classList.add("senderText");
 	aiResult.classList.add("aiResult");
-	senderText.innerHTML = `<div class="image">Me</div> ${question}`;
-	aiResult.innerHTML = `<div class="image">AI</div>Thinking...`;
+	senderText.innerHTML = `<div class="image"><i class="fa fa-user"></i></div> ${question}`;
+	aiResult.innerHTML = `<div class="image"><i class="fa fa-robot"></i></div>Thinking...`;
 	searchResult.appendChild(senderText);
 	searchResult.appendChild(aiResult);
 
@@ -24,7 +24,14 @@ searchBtn.addEventListener("click", () => {
 	)
 		.then(res => res.text())
 		.then(data => {
-			aiResult.innerHTML = `<div class="image">AI</div>${data}`;
+			aiResult.innerHTML = `<div class="image"><i class="fa fa-robot"></i></div>
+        <div id="simpleUsage">${data}</div>`;
 			searchResult.appendChild(aiResult);
+
+			new TypeIt("#simpleUsage", {
+				strings: "",
+				speed: 50,
+				waitUntilVisible: true
+			}).go();
 		});
 });
