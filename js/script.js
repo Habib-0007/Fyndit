@@ -18,6 +18,7 @@ const signUserIn = e => {
 		welcomePage.style.display = "none";
 		chat.style.display = "flex";
 		displayName.textContent = `Welcome ${userNameVal} 👋`;
+		document.body.style.display = "block";
 	}
 };
 
