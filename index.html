@@ -5,30 +5,48 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
 		/>
-		<link rel="stylesheet" href="css/index.css" />
-		<script src="js/index.js" defer></script>
-		<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/script.js" defer></script>
 		<title>ChatAI</title>
 	</head>
 	<body>
 		<main>
-			<header>
-				<h1>Fyndit</h1>
-				<a class="toggle" href="https://habibadebayo.vercel.app/"
-					>Created by Habib</a
-				>
-			</header>
-			<section class="searchResult"></section>
-			<section class="searchArea">
+			<section class="welcome_page">
 				<div>
-					<input type="text" placeholder="Enter a search sentence..." />
-					<button><i class="fa fa-paper-plane"></i></button>
+					<h1>Hi 👋</h1>
+					<h3>Welcome to Fyndit, kindly sign in</h3>
+					<div class="image">
+						<img src="./welcome.svg" alt="welcome" />
+					</div>
+					<form>
+						<input type="text" placeholder="What is your name?" />
+						<button>Sign in</button>
+					</form>
 				</div>
-				<div>
-					Fyndit can make mistakes, make sure you verify important information
-				</div>
+			</section>
+
+			<section class="chat">
+				<header>
+					<nav>
+						<h1>Fyndit</h1>
+						<a href="https://fyndit.vercel.app/">Created by Habib</a>
+					</nav>
+					<div></div>
+				</header>
+				<section class="conver"></section>
+				<footer>
+					<div class="search">
+						<input type="text" placeholder="Enter a prompt here" />
+						<button>
+							<span class="material-symbols-outlined"> send </span>
+						</button>
+					</div>
+					<p>
+						Fyndit can make mistakes, make sure you verify important information
+					</p>
+				</footer>
 			</section>
 		</main>
 	</body>
