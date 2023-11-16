@@ -110,18 +110,23 @@ header nav {
 	padding: 10px 12px;
 }
 
+header h1 {
+	font-size: 1.6em;
+}
+
 header nav a {
 	text-decoration: none;
 	background: #000;
 	color: #fff;
 	padding: 9px 14px;
 	border-radius: 5px;
+	font-size: 1.2em;
 }
 
 header div {
 	background: #000;
 	color: #fff;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	display: block;
 	width: 100%;
 	text-align: center;
@@ -140,7 +145,7 @@ header div {
 }
 
 .user {
-	background: #000;
+	background: #2a2a2a;
 	color: #fff;
 	margin-top: 16px;
 	padding: 10px 15px;
@@ -153,10 +158,10 @@ header div {
 .robot {
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 	background: #fff;
+	color: #2a2a2a;
 	width: 80%;
 	margin-top: 16px;
 	padding: 10px 15px;
-	color: #000;
 	border-radius: 10px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -187,6 +192,7 @@ footer {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	white-space: pre-wrap;
+	color: #2a2a2a;
 }
 
 .search button {
