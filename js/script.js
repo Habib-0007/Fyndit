@@ -1,7 +1,7 @@
 let userName = document.querySelector("form input");
 let signIn = document.querySelector("form button");
 let welcomePage = document.querySelector(".welcome_page");
-let searchQues = document.querySelector(".search input");
+let searchQues = document.querySelector(".search textarea");
 let searchBtn = document.querySelector(".search button");
 let conver = document.querySelector(".conver");
 let chat = document.querySelector(".chat");
