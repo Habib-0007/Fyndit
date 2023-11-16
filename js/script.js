@@ -46,7 +46,10 @@ const searchForRes = () => {
 				robot.textContent = data;
 			}
 		});
-				searchQues.value = "";
+	searchQues.value = "";
+	setInterval(function () {
+		conver.scrollTop += 1;
+	}, 50);
 };
 
 signIn.addEventListener("click", signUserIn);
