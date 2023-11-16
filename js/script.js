@@ -39,17 +39,29 @@ const searchForRes = () => {
 	conver.appendChild(user);
 	conver.appendChild(robot);
 
+	function autoScroll() {
+		conver.scrollTop += 1;
+	}
+
 	fetch(url)
 		.then(res => res.text())
 		.then(data => {
 			if (data != "" || data != undefined || data != null) {
-				robot.textContent = data;
+				robot.textContent = "";
+				let i = 0;
+				let speed = 50;
+				function typeWriter() {
+					if (i < data.length) {
+						robot.textContent += data.charAt(i);
+						i++;
+					}
+					setTimeout(typeWriter, speed);
+				}
+				typeWriter();
+				myInterval = setInterval(autoScroll, 50);
 			}
 		});
 	searchQues.value = "";
-	setInterval(function () {
-		conver.scrollTop += 1;
-	}, 50);
 };
 
 signIn.addEventListener("click", signUserIn);
