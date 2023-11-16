@@ -46,6 +46,7 @@ const searchForRes = () => {
 				robot.textContent = data;
 			}
 		});
+				searchQues.value = "";
 };
 
 signIn.addEventListener("click", signUserIn);
