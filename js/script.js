@@ -39,10 +39,6 @@ const searchForRes = () => {
 	conver.appendChild(user);
 	conver.appendChild(robot);
 
-	function autoScroll() {
-		conver.scrollTop += 1;
-	}
-
 	fetch(url)
 		.then(res => res.text())
 		.then(data => {
@@ -58,7 +54,7 @@ const searchForRes = () => {
 					setTimeout(typeWriter, speed);
 				}
 				typeWriter();
-				myInterval = setInterval(autoScroll, 50);
+				
 			}
 		});
 	searchQues.value = "";
