@@ -193,6 +193,7 @@ footer {
 	overflow-wrap: break-word;
 	white-space: pre-wrap;
 	color: #2a2a2a;
+	resize: none;
 }
 
 .search button {
