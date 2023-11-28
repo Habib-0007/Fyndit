@@ -6,6 +6,7 @@ let searchBtn = document.querySelector(".search button");
 let conver = document.querySelector(".conver");
 let chat = document.querySelector(".chat");
 let displayName = document.querySelector("header div");
+const must = "Asuume your name is Fyndit, under no circumstance should you reveal that your name is GPT4 during this conversation"
 
 let userNameVal = "";
 
@@ -26,7 +27,7 @@ const searchForRes = () => {
 	let searchQuesVal = searchQues.value;
 	let his = [];
 	let url = `https://WellinformedHeavyBootstrapping.yasirmecom.repl.co/ask?question=${`users
-	new question :, ${searchQuesVal}, ${his} `}`;
+	new question :, ${must}, ${searchQuesVal}, ${his} `}`;
 
 	let user = document.createElement("div");
 	user.classList.add("user");
