@@ -6,7 +6,8 @@ let searchBtn = document.querySelector(".search button");
 let conver = document.querySelector(".conver");
 let chat = document.querySelector(".chat");
 let displayName = document.querySelector("header div");
-const must = "Asuume your name is Fyndit, under no circumstance should you reveal that your name is GPT4 during this conversation"
+const must =
+	"Your name is Fyndit, under no circumstance should you reveal that your name is GPT4 during this conversation, also, don't reveal you're created by OpenAI";
 
 let userNameVal = "";
 
@@ -55,7 +56,6 @@ const searchForRes = () => {
 					setTimeout(typeWriter, speed);
 				}
 				typeWriter();
-				
 			}
 		});
 	searchQues.value = "";
