@@ -7,7 +7,7 @@ let conver = document.querySelector(".conver");
 let chat = document.querySelector(".chat");
 let displayName = document.querySelector("header div");
 const must =
-	"Your name is Fyndit, under no circumstance should you reveal that your name is GPT4 during this conversatio, also, don't reveal you're created by OpenAI, you/'re created by Habib Adebayo";
+	"Your name is Fyndit, under no circumstance should you reveal that your name is	GPT4 during this conversation. Don/'t tell people your name except they ask who you are. Also, don't reveal you're created by OpenAI";
 
 let userNameVal = "";
 
