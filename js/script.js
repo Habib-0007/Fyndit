@@ -6,8 +6,6 @@ let searchBtn = document.querySelector(".search button");
 let conver = document.querySelector(".conver");
 let chat = document.querySelector(".chat");
 let displayName = document.querySelector("header div");
-const must =
-	"Your name is Fyndit, under no circumstance should you reveal that your name is	GPT4 during this conversation. Don/'t tell people your name except they ask who you are. Also, don't reveal you're created by OpenAI";
 
 let userNameVal = "";
 
@@ -26,9 +24,8 @@ const signUserIn = e => {
 
 const searchForRes = () => {
 	let searchQuesVal = searchQues.value;
-	let his = [];
-	let url = `https://WellinformedHeavyBootstrapping.yasirmecom.repl.co/ask?question=${`users
-	new question :, ${must}, ${searchQuesVal}, ${his} `}`;
+	let url =
+		"https://hercai.onrender.com/v3/hercai?question=What is javascript?";
 
 	let user = document.createElement("div");
 	user.classList.add("user");
@@ -41,11 +38,12 @@ const searchForRes = () => {
 	conver.appendChild(user);
 	conver.appendChild(robot);
 
-	fetch(url)
-		.then(res => res.text())
+	/*	fetch(url)
+		.then(res => res.json())
 		.then(data => {
+			console.log(data);
 			if (data != "" || data != undefined || data != null) {
-				robot.textContent = "";
+			 robot.textContent = "";
 				let i = 0;
 				let speed = 50;
 				function typeWriter() {
@@ -54,10 +52,21 @@ const searchForRes = () => {
 						i++;
 					}
 					setTimeout(typeWriter, speed);
-				}
-				typeWriter();
+				} 
+				 typeWriter();
 			}
-		});
+		}); */
+
+	async function fetchData() {
+		try {
+			const res = await fetch(url);
+			const data = await res.json();
+			console.log(data);
+		} catch (error) {
+			console.log(error.message);
+		}
+	}
+	fetchData();
 	searchQues.value = "";
 };
 
