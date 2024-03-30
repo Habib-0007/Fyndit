@@ -38,7 +38,7 @@ const searchForRes = () => {
 	conver.appendChild(user);
 	conver.appendChild(robot);
 
-	/*	fetch(url)
+	fetch(url)
 		.then(res => res.json())
 		.then(data => {
 			console.log(data);
@@ -55,18 +55,8 @@ const searchForRes = () => {
 				} 
 				 typeWriter();
 			}
-		}); */
+		}); 
 
-	async function fetchData() {
-		try {
-			const res = await fetch(url);
-			const data = await res.json();
-			console.log(data);
-		} catch (error) {
-			console.log(error.message);
-		}
-	}
-	fetchData();
 	searchQues.value = "";
 };
 
