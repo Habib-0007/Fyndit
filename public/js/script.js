@@ -79,9 +79,10 @@ const searchForRes = async () => {
             i++;
           }
           setTimeout(typeWriter, speed);
+       }
+      typeWriter();
      }
-    typeWriter();
-  }
+   }
  } catch (err) {
    alert(err.message)
  }
