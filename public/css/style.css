@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=ABeeZee");
+@import url("https://fonts.googleapis.com/css2?family=Inter");
 
 * {
 	padding: 0;
@@ -6,7 +6,7 @@
 	border: none;
 	outline: none;
 	box-sizing: border-box;
-	font-family: "ABeeZee", sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
 ::selection {
