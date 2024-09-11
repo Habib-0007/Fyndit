@@ -31,7 +31,7 @@ const searchForRes = () => {
   ];
 
   let searchQuesVal = searchQues.value;
-  let url = "http://localhost.com/api/";
+  let url = "https://fyndit.vercel.app/api";
 
   const bodyData = {
     history: history,
