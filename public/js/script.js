@@ -22,14 +22,14 @@ const signUserIn = (e) => {
   }
 };
 
-const searchForRes = async () => {
-  let history = [
+let history = [
     {
       role: "assistant",
       content: "Hello! How are you today?",
     },
-  ];
+];
 
+const searchForRes = async () => {
   let searchQuesVal = searchQues.value;
   let url = "https://fyndit.vercel.app/api";
 
