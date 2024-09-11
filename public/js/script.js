@@ -22,7 +22,7 @@ const signUserIn = (e) => {
   }
 };
 
-const searchForRes = () => {
+const searchForRes = async () => {
   let history = [
     {
       role: "assistant",
@@ -54,16 +54,17 @@ const searchForRes = () => {
     content: searchQuesVal,
   });
 
-  fetch(url, {
+ try {
+   const response = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(bodyData),
   })
-    .then((res) => res.json())
-    .then((data) => {
-      const resData = data.gpt;
+   if (response.ok) {
+      const data = await response.json();
+     const resData = data.gpt;
       history.push({
         role: "assistant",
         content: resData,
@@ -78,11 +79,12 @@ const searchForRes = () => {
             i++;
           }
           setTimeout(typeWriter, speed);
-        }
-        typeWriter();
-      }
-    });
-
+     }
+    typeWriter();
+  }
+ } catch (err) {
+   alert(err.message)
+ }
   searchQues.value = "";
 };
 
