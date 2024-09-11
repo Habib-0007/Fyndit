@@ -12,3 +12,5 @@ app.use("/api", queryRoute);
 app.listen(PORT, () => {
   console.log(`Application starts on PORT ${PORT}`);
 });
+
+module.exports = app;
