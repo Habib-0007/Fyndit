@@ -23,15 +23,15 @@ const signUserIn = (e) => {
 };
 
 let history = [
-    {
-      role: "assistant",
-      content: "Hello! How are you today?",
-    },
+  {
+    role: "assistant",
+    content: "Hello! How are you today?",
+  },
 ];
 
 const searchForRes = async () => {
   let searchQuesVal = searchQues.value;
-  let url = "https://fyndit.vercel.app/api";
+  let url = "/api";
 
   const bodyData = {
     history: history,
@@ -54,17 +54,19 @@ const searchForRes = async () => {
     content: searchQuesVal,
   });
 
- try {
-   const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(bodyData),
-  })
-   if (response.ok) {
+  searchQues.value = "";
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyData),
+    });
+    if (response.ok) {
       const data = await response.json();
-     const resData = data.gpt;
+      const resData = data.gpt;
       history.push({
         role: "assistant",
         content: resData,
@@ -72,21 +74,20 @@ const searchForRes = async () => {
       if (resData != "" || resData != undefined || resData != null) {
         robot.textContent = "";
         let i = 0;
-        let speed = 50;
+        let speed = 5;
         function typeWriter() {
           if (i < resData.length) {
             robot.textContent += resData.charAt(i);
             i++;
           }
           setTimeout(typeWriter, speed);
-       }
-      typeWriter();
-     }
-   }
- } catch (err) {
-   alert(err.message)
- }
-  searchQues.value = "";
+        }
+        typeWriter();
+      }
+    }
+  } catch (err) {
+    alert(err.message);
+  }
 };
 
 signIn.addEventListener("click", signUserIn);
