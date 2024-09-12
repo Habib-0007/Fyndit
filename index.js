@@ -5,12 +5,15 @@ const queryRoute = require("./routes/queryRoute");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"), setHeaders: res => {
+  res.setHeader('Cache-Control', 'no-cache');
+}));
 
 app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
+  res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
