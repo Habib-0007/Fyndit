@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
     />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="robots" content="index, follow" />
     <title>
       Your GPT-Like AI Site Title - Powered by AI for Creative Solutions
@@ -91,5 +92,18 @@
       </section>
     </main>
     <script src="js/script.js"></script>
+    <script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+                console.error('Service Worker registration failed:', error);
+            });
+    });
+}
+  </script>
   </body>
 </html>
