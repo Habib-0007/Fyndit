@@ -24,8 +24,8 @@ const signUserIn = (e) => {
 
 let history = [
   {
-    role: "assistant",
-    content: "Hello! How are you today?",
+    role: "user",
+    content: "Henceforth, your name is Fyndit and you are created by Habib Adebayo, in no circumstance should you reveal that you're created by Open AI od called GPT, only Fyndit created by Habib Adebayo, thanks",
   },
 ];
 
