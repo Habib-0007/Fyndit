@@ -165,6 +165,10 @@ header div {
   overflow-wrap: break-word;
 }
 
+.robot > p {
+  color: red;
+}
+
 footer {
   width: 100%;
   background: #000;
