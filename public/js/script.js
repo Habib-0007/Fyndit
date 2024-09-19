@@ -44,7 +44,7 @@ const searchForRes = async () => {
 
   let robot = document.createElement("div");
   robot.classList.add("robot");
-  robot.textContent = "Thinking...";
+  robot.innerHTML = "Thinking...";
 
   conver.appendChild(user);
   conver.appendChild(robot);
