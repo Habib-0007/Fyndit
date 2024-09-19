@@ -74,10 +74,10 @@ const searchForRes = async () => {
       if (resData != "" || resData != undefined || resData != null) {
         robot.textContent = "";
         let i = 0;
-        let speed = 5;
+        let speed = 2;
         function typeWriter() {
           if (i < resData.length) {
-            robot.textContent += resData.charAt(i);
+            robot.innerHTML += resData.charAt(i);
             i++;
           }
           setTimeout(typeWriter, speed);
