@@ -66,10 +66,14 @@ const searchForRes = async () => {
     });
     if (response.ok) {
       const data = await response.json();
-      const resData = data.gpt;
+      let resData = data.gpt;
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(resData, 'text/html');
+     resData = doc.body.firstChild;
+        
       history.push({
         role: "assistant",
-        content: resData,
+        content: `${resData}`,
       });
       if (resData != "" || resData != undefined || resData != null) {
         robot.innerHTML = "";
