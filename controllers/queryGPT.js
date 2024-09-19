@@ -9,7 +9,7 @@ const askGPT = (req, res) => {
         messages: history,
         prompt: prompt,
         model: "GPT-4",
-        markdown: false,
+        markdown: true,
       },
       (err, data) => {
         if (err != null) {
