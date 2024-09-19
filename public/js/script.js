@@ -73,8 +73,8 @@ const searchForRes = async () => {
         content: resData,
       });
       if (resData != "" || resData != undefined || resData != null) {
-        robot.innerHTML = "";
-        let i = 0;
+        robot.innerHTML = resData;
+        /* let i = 0;
         let speed = 2;
         function typeWriter() {
           if (i < resData.length) {
@@ -83,7 +83,7 @@ const searchForRes = async () => {
           }
           setTimeout(typeWriter, speed);
         }
-        typeWriter();
+        typeWriter(); */
       }
     }
   } catch (err) {
