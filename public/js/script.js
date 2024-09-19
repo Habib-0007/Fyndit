@@ -66,14 +66,11 @@ const searchForRes = async () => {
     });
     if (response.ok) {
       const data = await response.json();
-      let gptData = data.gpt;
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(gptData, 'text/html');
-      const resData = doc.body.firstChild.innerHTML;
+      let resData = data.gpt;
         
       history.push({
         role: "assistant",
-        content: `${resData}`,
+        content: resData,
       });
       if (resData != "" || resData != undefined || resData != null) {
         robot.innerHTML = "";
@@ -81,7 +78,7 @@ const searchForRes = async () => {
         let speed = 2;
         function typeWriter() {
           if (i < resData.length) {
-            robot.innerHTML += resData.charAt(i);
+            robot.innerHTML += `${resData.charAt(i)}`;
             i++;
           }
           setTimeout(typeWriter, speed);
