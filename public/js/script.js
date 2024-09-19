@@ -72,7 +72,7 @@ const searchForRes = async () => {
         content: resData,
       });
       if (resData != "" || resData != undefined || resData != null) {
-        robot.textContent = "";
+        robot.innerHTML = "";
         let i = 0;
         let speed = 2;
         function typeWriter() {
