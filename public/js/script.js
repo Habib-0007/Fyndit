@@ -66,7 +66,7 @@ const searchForRes = async () => {
     });
     if (response.ok) {
       const data = await response.json();
-      let gotData = data.gpt;
+      let gptData = data.gpt;
       const parser = new DOMParser();
       const doc = parser.parseFromString(gptData, 'text/html');
       const resData = doc.body.firstChild.innerHTML;
