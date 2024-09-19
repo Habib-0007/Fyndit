@@ -69,7 +69,7 @@ const searchForRes = async () => {
       let resData = data.gpt;
       const parser = new DOMParser();
       const doc = parser.parseFromString(resData, 'text/html');
-     resData = doc.body.firstChild;
+      resData = doc.body;
         
       history.push({
         role: "assistant",
