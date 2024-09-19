@@ -66,10 +66,10 @@ const searchForRes = async () => {
     });
     if (response.ok) {
       const data = await response.json();
-      let resData = data.gpt;
+      let gotData = data.gpt;
       const parser = new DOMParser();
-      const doc = parser.parseFromString(resData, 'text/html');
-      resData = doc.body;
+      const doc = parser.parseFromString(gptData, 'text/html');
+      const resData = doc.body.firstChild.innerHTML;
         
       history.push({
         role: "assistant",
