@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 * {
   padding: 0;
@@ -6,7 +6,7 @@
   border: none;
   outline: none;
   box-sizing: border-box;
-  font-family: "Space Grotesk", monospace;
+  font-family: "Rubik", monospace;
 }
 
 ::selection {
@@ -166,7 +166,15 @@ header div {
 }
 
 .robot > p {
-  color: red;
+  color: #000;
+}
+
+.robot pre {
+  width: 100%;
+}
+
+.robot pre code {
+  width: 100%;
 }
 
 footer {
