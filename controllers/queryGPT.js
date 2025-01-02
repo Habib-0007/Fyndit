@@ -41,7 +41,7 @@ const askGPT = (req, res) => {
 				content: "hi, how are you?",
 			})
 			.then(response => {
-				res.status(201).send(data);
+				res.status(201).send(response.reply);
 			});
 	} catch (err) {
 		res
