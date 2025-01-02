@@ -32,13 +32,13 @@ content, or fix bugs, please follow these steps:
 - Fork the repository.
 - Create a new branch for your changes:
   ```bash
-    git checkout -b feature/your-feature
+    git checkout -b branch
 - Make your changes and commit them:
   ```bash 
     git commit -m "Add your feature"
 - Push your changes to your forked repository:
   ```bash
-    git push origin feature/your-feature
+    git push origin branch
 - Create a pull request on this repository, explaining your changes and improvements.
 
 # Contact
