@@ -41,7 +41,7 @@ const signUserIn = e => {
 	}
 };
 
-var history = [
+var historyValues = [
 	{
 		role: "user",
 		content:
@@ -74,7 +74,7 @@ const searchForRes = async () => {
 	let url = "/api";
 
 	const bodyData = {
-		history: history,
+		history: historyValues,
 		prompt: searchQuesVal,
 	};
 
@@ -91,7 +91,7 @@ const searchForRes = async () => {
 	conver.appendChild(user);
 	conver.appendChild(robot);
 
-	history.push({
+	historyValues.push({
 		role: "user",
 		content: searchQuesVal,
 	});
@@ -109,15 +109,15 @@ const searchForRes = async () => {
 		});
 		if (response.ok) {
 			const data =
-				await response.json();
-			let resData = data.gpt;
+				await response.text();
+			let resData = data;
 
-			history.push({
+			historyValues.push({
 				role: "assistant",
 				content: resData,
 			});
 			if (
-				resData != "" ||
+				resData.trim() != "" ||
 				resData != undefined ||
 				resData != null
 			) {
