@@ -86,7 +86,7 @@ const searchForRes = async () => {
 	let robot =
 		document.createElement("div");
 	robot.classList.add("robot");
-	robot.innerHTML = "Thinking...";
+	robot.textContent = "Thinking...";
 
 	conver.appendChild(user);
 	conver.appendChild(robot);
@@ -109,8 +109,9 @@ const searchForRes = async () => {
 		});
 		if (response.ok) {
 			const data =
-				await response.text();
-			let resData = data;
+				await response.json();
+			let resData = data.gpt;
+					robot.textContent = "";
 
 			historyValues.push({
 				role: "assistant",
@@ -125,7 +126,7 @@ const searchForRes = async () => {
 				let speed = 2;
 				function typeWriter() {
 					if (i < resData.length) {
-						robot.innerHTML += `${resData.charAt(
+						robot.textContent += `${resData.charAt(
 							i
 						)}`;
 						i++;
