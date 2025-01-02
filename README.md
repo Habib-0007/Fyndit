@@ -1,6 +1,6 @@
-# Awesome AI Website
+# Fyndit AI
 
-Welcome to the Awesome AI Website project! This website showcases the power of artificial intelligence through interactive demonstrations and engaging content.
+Welcome to the Fyndit AI project! This website showcases the power of artificial intelligence through interactive demonstrations and engaging content.
 
 ## Features
 
@@ -12,7 +12,7 @@ Welcome to the Awesome AI Website project! This website showcases the power of a
 - HTML
 - CSS
 - JavaScript
-- Yasirmecom GPT API
+- GPTI npm package 
 
 ## Getting Started
 
@@ -45,4 +45,4 @@ content, or fix bugs, please follow these steps:
 
 If you have any questions or suggestions, feel free to reach out to us at adebayohabib7@gmail.com.
 
-Enjoy exploring the world of AI on our Awesome AI Website!
+Enjoy exploring the world of AI on our Fyndit AI Website!
