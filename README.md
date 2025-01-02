@@ -12,7 +12,7 @@ Welcome to the Fyndit AI project! This website showcases the power of artificial
 - HTML
 - CSS
 - JavaScript
-- GPTI npm package 
+- Hercai npm package 
 
 ## Getting Started
 
