@@ -1,13 +1,11 @@
 let userName = document.querySelector<HTMLInputElement>("form input");
-let signIn = document.querySelector<HTMLDivElement>("form button");
+let signIn = document.querySelector<HTMLButtonElement>("form button");
 let welcomePage = document.querySelector<HTMLDivElement>(".welcome_page");
 let searchQues = document.querySelector<HTMLTextAreaElement>(".search textarea");
 let searchBtn = document.querySelector<HTMLButtonElement>(".search button");
 let conver = document.querySelector<HTMLDivElement>(".conver");
 let chat = document.querySelector<HTMLDivElement>(".chat");
 let displayName = document.querySelector<HTMLDivElement>("header div");
-
-alert("Hell")
 
 let userNameVal: string = "";
 
