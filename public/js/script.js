@@ -110,8 +110,9 @@ const searchForRes = async () => {
 		if (response.ok) {
 			const data =
 				await response.json();
-			let resData = data.gpt;
-					robot.textContent = "";
+			let resData = data.message;
+
+			robot.textContent = "";
 
 			historyValues.push({
 				role: "assistant",

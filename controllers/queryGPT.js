@@ -7,11 +7,10 @@ const askGPT = async (req, res) => {
 	);
 	const { history, prompt } = req.body;
 	try {
-		const data = await gpt.v1({
+		const data = await gpt.v3({
 			messages: history,
-			prompt: prompt,
-			model: "GPT-4",
 			markdown: false,
+			stream: false,
 		});
 
 		res.status(201).send(data);
